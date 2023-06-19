@@ -1,0 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // code to execute when the DOM is fully loaded
+  });
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var phone = document.getElementById('phone');
+    var address = document.getElementById('address');
+    var education = document.getElementById('education');
+    var experience = document.getElementById('experience');
+    var form = document.querySelector('form');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      chrome.storage.sync.set(){
+        'name': name.value,
+        'email': email.value,
+        'phone': phone.value,
+        'address': address.value,
+        'education': education.value,
+        'experience': experience.value
+      }, function() {
+        alert('Resume saved!');
+      });
+    });
+  });
+  
